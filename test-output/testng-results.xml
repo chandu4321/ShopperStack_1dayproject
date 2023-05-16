@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[The empty browser is Launched]]>
+    </line>
+    <line>
+      <![CDATA[Browser window is Maximized]]>
+    </line>
+    <line>
+      <![CDATA[User Login Sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[User is able to see order is confirmed page]]>
+    </line>
+    <line>
+      <![CDATA[User Logout Sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[Server Closed Sucessfully]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="37710" started-at="2023-05-16T18:49:03 IST" finished-at="2023-05-16T18:49:40 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="37710" started-at="2023-05-16T18:49:03 IST" finished-at="2023-05-16T18:49:40 IST">
+      <class name="TestCases.TC_14">
+        <test-method status="PASS" signature="browserSetUp()[pri:0, instance:TestCases.TC_14@4f970963]" name="browserSetUp" is-config="true" duration-ms="10070" started-at="2023-05-16T18:49:03 IST" finished-at="2023-05-16T18:49:13 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[The empty browser is Launched]]>
+            </line>
+            <line>
+              <![CDATA[Browser window is Maximized]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- browserSetUp -->
+        <test-method status="PASS" signature="LoginUser()[pri:0, instance:TestCases.TC_14@4f970963]" name="LoginUser" is-config="true" duration-ms="501" started-at="2023-05-16T18:49:13 IST" finished-at="2023-05-16T18:49:13 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[User Login Sucessfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginUser -->
+        <test-method status="PASS" signature="TC_002()[pri:0, instance:TestCases.TC_14@4f970963]" name="TC_002" duration-ms="16098" started-at="2023-05-16T18:49:13 IST" finished-at="2023-05-16T18:49:29 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[User is able to see order is confirmed page]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_002 -->
+        <test-method status="PASS" signature="LogOut()[pri:0, instance:TestCases.TC_14@4f970963]" name="LogOut" is-config="true" duration-ms="10215" started-at="2023-05-16T18:49:29 IST" finished-at="2023-05-16T18:49:39 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[User Logout Sucessfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LogOut -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:TestCases.TC_14@4f970963]" name="quitBrowser" is-config="true" duration-ms="787" started-at="2023-05-16T18:49:39 IST" finished-at="2023-05-16T18:49:40 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Server Closed Sucessfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- TestCases.TC_14 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
