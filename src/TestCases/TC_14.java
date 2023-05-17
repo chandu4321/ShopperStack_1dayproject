@@ -11,6 +11,7 @@ import ShoppersStack.BaseClass;
 
 public class TC_14 extends BaseClass {
 	@Test
+	//User should buy the first product from the cart in Women category
 	public void TC_002() throws InterruptedException {
 		WebDriverWait wait=new WebDriverWait(driver, 20);
 		driver.findElement(By.id("search")).click();

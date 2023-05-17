@@ -9,6 +9,7 @@ import ShoppersStack.BaseClass;
 
 public class TC_11 extends BaseClass{
 	@Test
+	//User is able to add the office adress
 	public void addOfficeAdress() throws InterruptedException {
 		driver.findElement(By.xpath("//div[text()='a']")).click();
 		driver.findElement(By.xpath("//li[text()='My Profile']")).click();

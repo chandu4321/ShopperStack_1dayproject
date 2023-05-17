@@ -8,6 +8,7 @@ import ShoppersStack.BaseClass;
 
 public class TC_12 extends BaseClass {
 	@Test
+	//User should be able to add the first product to the cart from men category
 	public void TC_001() throws InterruptedException {
 		driver.findElement(By.id("search")).click();
 		driver.findElement(By.id("search")).sendKeys("men");

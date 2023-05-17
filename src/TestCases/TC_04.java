@@ -23,7 +23,7 @@ public class TC_04 extends BaseClass {
 		driver.findElement(By.id("buynow_fl")).click();
 		driver.findElement(By.name("address")).click();
 		driver.findElement(By.xpath("//button[text()='Proceed']")).click();
-		
+		//Adding the Card Details
 		driver.findElement(By.xpath("//button[text()='Add Card']")).click();
 		driver.findElement(By.xpath("//input[@id=':r4:']")).sendKeys("abcd");
 		driver.findElement(By.id(":r3o:")).sendKeys("3014401191608303");

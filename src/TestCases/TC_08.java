@@ -3,6 +3,7 @@ package TestCases;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -37,21 +38,16 @@ public class TC_08 extends BaseClass {
 		driver.findElement(By.xpath("(//button[contains(text(),'add to cart')])[1]")).click();
 		Reporter.log("beauty product added to cart",true);
 		Thread.sleep(2000);
-		
+	
 		//visit cart page remove all products 
 		driver.findElement(By.id("cartIcon")).click();
 		for(int i =1;i<=4;i++) {
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Remove from cart')]")));
 		driver.findElement(By.xpath("//button[contains(text(),'Remove from cart')]")).click();
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Yes')]")));
 		driver.findElement(By.xpath("//button[contains(text(),'Yes')]")).click();
 		Thread.sleep(2000);
 		Reporter.log("product removed from cart",true);
-		driver.quit();
 		}
-	
 	}
-
-
-
-
 }

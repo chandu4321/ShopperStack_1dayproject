@@ -14,9 +14,10 @@ import ShoppersStack.BaseClass;
 public class TC_01 extends BaseClass {
 	@Test
 	// T4 - User should be able to add the address
+	
 	public void TestCase() throws InterruptedException {
 		System.out.println(driver.getTitle());
-
+		//user entering the details
 		driver.findElement(By.xpath("//div[text()='a']")).click();
 		driver.findElement(By.xpath("//li[text()='My Profile']")).click();
 		driver.findElement(By.xpath("//div[text()='My Addresses']")).click();
@@ -26,7 +27,7 @@ public class TC_01 extends BaseClass {
 		driver.findElement(By.id("Street Info")).sendKeys("Katriguppe");
 		driver.findElement(By.id("Landmark")).sendKeys("BigBazar");
 		WebElement dropdown = driver.findElement(By.id("Country"));
-
+		//Handling of dropdown using select class
 		Select select = new Select(dropdown);
 		select.selectByValue("India");
 		WebElement state = driver.findElement(By.id("State"));

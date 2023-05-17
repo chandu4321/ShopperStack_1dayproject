@@ -41,7 +41,7 @@ public class TC_02 extends BaseClass {
 		mark.sendKeys(Keys.CONTROL + "A");
 		mark.sendKeys(Keys.DELETE);
 		mark.sendKeys("Factory-Outlet");
-		
+		//User click on the update button
 		driver.findElement(By.id("Update Address")).click();
 
 	}

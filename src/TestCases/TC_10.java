@@ -10,6 +10,7 @@ import ShoppersStack.BaseClass;
 
 public class TC_10 extends BaseClass{
 	@Test
+	//User Should be able to Add and view My likes
 	public void addViewLikes() {
 		WebDriverWait explicitwait=new WebDriverWait(driver, 20);
 		driver.findElement(By.xpath("//div[text()='a']")).click();

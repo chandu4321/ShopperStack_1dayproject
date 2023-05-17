@@ -10,6 +10,7 @@ import ShoppersStack.BaseClass;
 
 public class TC_09 extends BaseClass{
 	@Test
+	//User is able to
 	public void deleteLikedItems() throws InterruptedException {
 		WebDriverWait explicitwait=new WebDriverWait(driver, 20);
 		driver.findElement(By.xpath("//div[text()='a']")).click();

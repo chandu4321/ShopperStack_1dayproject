@@ -7,6 +7,7 @@ import ShoppersStack.BaseClass;
 
 public class TC_13 extends BaseClass {
 	@Test
+	//User should remove first product from the cart
 	public void TC_003() throws InterruptedException {
 		driver.findElement(By.id("cartIcon")).click();
 		driver.findElement(By.xpath("//button[text()='Remove from cart']/../../../..")).click();
