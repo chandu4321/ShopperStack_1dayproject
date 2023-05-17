@@ -28,7 +28,7 @@ public class BaseClass {
 		Reporter.log("Browser window is Maximized", true);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get("https://www.shoppersstack.com/");
-		driver.findElement(By.id("loginBtn")).click();
+		driver.findElement(By.xpath("//button[text()='Login']")).click();
 
 	}
 
@@ -43,7 +43,7 @@ public class BaseClass {
 
 	@AfterMethod
 	public void LogOut() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[text()='a']")).click();
 		driver.findElement(By.xpath("//li[text()='Logout']")).click();
 		Reporter.log("User Logout Sucessfully", true);
