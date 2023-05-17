@@ -45,17 +45,17 @@ public class BaseClass {
 		Reporter.log("User Login Sucessfully", true);
 	}
 
-	@AfterMethod
-	public void LogOut() throws InterruptedException {
+	@AfterMethod(alwaysRun = true)
+	public void LogOut() {
 		WebElement logout = driver.findElement(By.xpath("//div[text()='a']"));
 		wait = new WebDriverWait(driver, 50);
-		wait.until(ExpectedConditions.visibilityOf(logout));
+		wait.until(ExpectedConditions.elementToBeSelected(logout));
 		logout.click();
 		driver.findElement(By.xpath("//li[text()='Logout']")).click();
 		Reporter.log("User Logout Sucessfully", true);
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void quitBrowser() {
 		driver.quit();
 		Reporter.log("Server Closed Sucessfully", true);

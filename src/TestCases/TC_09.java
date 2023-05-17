@@ -2,6 +2,7 @@ package TestCases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -21,6 +22,10 @@ public class TC_09 extends BaseClass {
 		s.selectByValue("women");
 		driver.findElement(By.name("Submit")).click();
 		driver.findElement(By.id("Delete Women")).click();
+		
+		WebElement logout = driver.findElement(By.xpath("//div[text()='a']"));
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeSelected(logout));
 
 	}
 }
