@@ -4,7 +4,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -18,6 +21,7 @@ import org.testng.annotations.BeforeMethod;
  */
 public class BaseClass {
 	public WebDriver driver;
+	public WebDriverWait wait;
 
 	@BeforeClass
 	// Step1: Launching the Browser
@@ -43,8 +47,10 @@ public class BaseClass {
 
 	@AfterMethod
 	public void LogOut() throws InterruptedException {
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[text()='a']")).click();
+		WebElement logout = driver.findElement(By.xpath("//div[text()='a']"));
+		wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.visibilityOf(logout));
+		logout.click();
 		driver.findElement(By.xpath("//li[text()='Logout']")).click();
 		Reporter.log("User Logout Sucessfully", true);
 	}
